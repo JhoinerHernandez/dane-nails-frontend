@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta oficial Dane Nails: lila pastel + dorado, sobre fondos claros */
+  --color-dane-ink: #2c2438;        /* texto principal */
+  --color-dane-plum: #8b6fb8;       /* lila principal (marca) */
+  --color-dane-plum-deep: #6e559a;  /* lila para hover de botones */
+  --color-dane-clay: #c9a227;       /* dorado (acentos/CTA) */
+  --color-dane-gold: #c9a227;       /* alias dorado */
+  --color-dane-gold-deep: #a9841d;  /* dorado hover */
+  --color-dane-blush: #ece5f7;      /* lila muy claro (bordes) */
+  --color-dane-mist: #f6f3fc;       /* lila casi blanco (fondos alternos) */
+  --color-dane-bone: #ffffff;       /* blanco puro */
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+  --font-magic: 'League Script', cursive;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-dane-bone);
+  color: var(--color-dane-ink);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Foco visible accesible, consistente con la paleta */
+:focus-visible {
+  outline: 2px solid var(--color-dane-clay);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
